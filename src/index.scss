@@ -1,0 +1,20 @@
+$black: #0F0A0A;
+$blue: #7CD1EC;
+$cyan: #08B2E3;
+$red: #A72608;
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+  color: $black;
+}
