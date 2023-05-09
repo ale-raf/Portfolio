@@ -1,0 +1,10 @@
+@mixin default_btn ($color) {
+    color: $color;
+    border: 0.1rem solid index.$red;
+    border-radius: 3rem;
+}
+
+@mixin hover_btn ($color, $background) {
+    color: $color;
+    background-color: $background;
+}
