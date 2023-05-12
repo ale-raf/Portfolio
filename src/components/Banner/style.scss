@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 @use '../../index.scss';
 @import '../../styles/mixins';
 
+=======
+>>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 .banner_section {
     max-width: 1200px;
     margin: 0 auto;
@@ -29,6 +32,7 @@
 .banner_avatar {
     width: 250px;
     border-radius: 100%;
+<<<<<<< HEAD
 
 }
 .banner_bottom {
@@ -53,6 +57,8 @@
     svg {
         margin-right: 10px;
     }
+=======
+>>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 }
 
 .banner_img {
@@ -60,9 +66,15 @@
     width: 475px;
     height: 475px;
     background-size: cover;
+<<<<<<< HEAD
     // margin-left: auto;
     margin-bottom: -120px;
     margin-top: -120px;
+=======
+    margin-left: auto;
+    margin-bottom: -100px;
+    margin-top: -90px;
+>>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 }
 
 @media screen and (max-width: 768px) {

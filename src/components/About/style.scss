@@ -23,13 +23,23 @@
 }
 
 .about_img {
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
     background-image: url('../../assets/Code-typing-bro.svg');
     width: 400px;
     height: 400px;
     background-size: cover;
+<<<<<<< HEAD
     margin-left: 10%;
     margin-bottom: -75px;
     margin-top: -130px;
     z-index: 100;
+=======
+    margin-right: auto;
+    margin-bottom: -100px;
+    margin-top: -100px;
+    z-index: 1000;
+>>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 }
