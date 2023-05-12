@@ -2,10 +2,11 @@
 
 .about_skills {
     max-width: calc(1200px - 10%);
+    height: 350px;
     margin: -100px auto 50px auto;
-    padding: 2rem;
+    padding: 3rem;
     background-color: white;
-    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 20px 0px index.$black;
     border-radius: 2rem;
     color: index.$black;
     p {

@@ -1,4 +1,5 @@
 @use '../../index.scss';
+@import '../../styles/mixins';
 
 #projets {
     background-color: index.$red;
@@ -10,33 +11,39 @@
     padding: 2rem;
     color: white;
     h2 {
-        margin: 2rem auto;
+        margin: 2rem auto 4rem auto;
         font-size: 3rem;
         text-align: center;
     }
 }
 
-.works_card {
+.works_filters {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    color: black;
-    background-color: black;
-    cursor: pointer;
-    &:hover {
-        background-color: white;
-        filter: opacity(50%);
-        &:hover .works_hover {
-            display: block;
+    justify-content: space-evenly;
+    margin: 5rem 0;
+    li {
+        @include default_btn ($color: white, $border: 2px solid white);
+        min-width: 100px;
+        padding: 1rem;
+        font-family: 'Lato';
+        font-size: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
         }
     }
 }
 
-.works_hover {
-    display: none;
-    text-align: center;
-    transition: .3s;
+.works_wrapper {
+    display: block;
+    padding: 3rem;
+}
+
+.works_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 10rem;
+    justify-items: center;
 }

@@ -1,7 +1,8 @@
-@mixin default_btn ($color) {
+@mixin default_btn ($color, $border) {
     color: $color;
-    border: 0.1rem solid index.$red;
+    border: $border;
     border-radius: 3rem;
+    transition: all .2s ease-in-out;
 }
 
 @mixin hover_btn ($color, $background) {

@@ -1,26 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faServer, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
+import skills from '../../datas/skills';
 import './style.scss';
 
 function Skills() {
-    const skills = [
-        {
-            icon: faCode,
-            title: 'Front-end',
-            items: ['HTML', 'CSS (SCSS)', 'JavaScript', 'React']
-        },
-        {
-            icon: faServer,
-            title: 'Back-end',
-            items: ['Node.js', 'Express', 'MongoDB']
-        },
-        {
-            icon: faScrewdriverWrench,
-            title: 'Outils',
-            items: ['Git & Github', 'Figma & Photoshop', 'SEO', 'Trello']
-        }
-    ]
-
     return (
         <div className='about_skills'>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 

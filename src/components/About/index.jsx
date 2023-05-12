@@ -3,7 +3,7 @@ import './style.scss';
 
 function About() {
     return (
-        <section className='about_section'>
+        <section id='about' className='about_section'>
             <div className='about_container'>
                 <div className='about_introduction'>
                     <h3>Bonjour, je m'appelle Alexis et je suis développeur web junior. Les projets que je réalise sont plutôt
@@ -13,7 +13,7 @@ function About() {
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, vitae repudiandae repellendus rem aperiam quod delectus dolorum! Id cumque voluptas esse nemo, veniam, quas libero in deserunt, impedit cum ad.</p>
                 </div>
                 <Skills />
-                {/* <div className='about_img'></div> */}
+                <div className='about_img'></div>
             </div>
         </section>
     )

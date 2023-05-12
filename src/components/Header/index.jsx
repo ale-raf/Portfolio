@@ -21,23 +21,23 @@ function Header() {
                 </div>
                 { !isHamburgerOpen ? <button className='hamburger' onClick={toggleHamburger}><FontAwesomeIcon className='burger' icon={faBars} /></button>
                 : <button className='hamburger' onClick={toggleHamburger}><FontAwesomeIcon className='burger' icon={faXmark} /></button> }
-                <div className={isHamburgerOpen ? 'navigation expanded' : 'navigation'}>
+                <div className={ isHamburgerOpen ? 'navigation expanded' : 'navigation' }>
                     <ul>
-                        <li>
-                            <Link to='/'>
+                        <Link to='/'>
+                            <li>
                                 <FontAwesomeIcon icon={faHouse} /> accueil
-                            </Link>
-                        </li>
-                        <li>
-                            <HashLink smooth to='/#projets'>
+                            </li>
+                        </Link>
+                        <HashLink smooth to='/#projets'>
+                            <li id='nav_projets'>
                                 <FontAwesomeIcon icon={faDiagramProject} /> projets
-                            </HashLink>
-                        </li>
-                        <li>
-                            <HashLink smooth to='/#contact'>
+                            </li>
+                        </HashLink>
+                        <HashLink smooth to='/#contact'>
+                            <li>
                                 <FontAwesomeIcon icon={faAddressCard} /> contact
-                            </HashLink>
-                        </li>
+                            </li>
+                        </HashLink>
                     </ul>
                 </div>
             </nav>

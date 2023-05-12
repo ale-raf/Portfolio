@@ -1,0 +1,52 @@
+@use '../../index.scss';
+
+.projects_card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 2rem;
+        box-shadow: 2px 2px 20px 0px index.$black;
+        transition: all .3s ease-in-out;
+    }
+}
+
+.projects_card:hover img {
+    // filter: brightness(40%);
+}
+
+.projects_card:hover .projects_hover {
+    opacity: 1;
+}
+
+.projects_hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #a7250888;
+    border-radius: 2rem;
+    font-family: 'Lato';
+    font-size: 2rem;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    h3 {
+        margin-bottom: 2rem;
+        font-family: 'Playfair Display';
+        font-size: 2.5rem;
+    }
+}

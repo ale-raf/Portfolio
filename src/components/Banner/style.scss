@@ -1,3 +1,6 @@
+@use '../../index.scss';
+@import '../../styles/mixins';
+
 .banner_section {
     max-width: 1200px;
     margin: 0 auto;
@@ -26,6 +29,30 @@
 .banner_avatar {
     width: 250px;
     border-radius: 100%;
+
+}
+.banner_bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+}
+
+.banner_scroll_btn {
+    @include default_btn ($color: index.$cyan, $border: 2px solid index.$cyan);
+    margin-left: 3rem;
+    padding: 2rem;
+    background-color: white;
+    font-family: 'Lato';
+    font-size: 2rem;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        @include hover_btn ($color: index.$black, $background: index.$blue)
+    }
+    svg {
+        margin-right: 10px;
+    }
 }
 
 .banner_img {
@@ -33,9 +60,9 @@
     width: 475px;
     height: 475px;
     background-size: cover;
-    margin-left: auto;
-    margin-bottom: -100px;
-    margin-top: -90px;
+    // margin-left: auto;
+    margin-bottom: -120px;
+    margin-top: -120px;
 }
 
 @media screen and (max-width: 768px) {
