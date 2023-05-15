@@ -1,18 +1,18 @@
-<<<<<<< HEAD
 @mixin default_btn ($color, $border) {
     color: $color;
     border: $border;
     border-radius: 3rem;
     transition: all .2s ease-in-out;
-=======
-@mixin default_btn ($color) {
-    color: $color;
-    border: 0.1rem solid index.$red;
-    border-radius: 3rem;
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 }
 
 @mixin hover_btn ($color, $background) {
     color: $color;
     background-color: $background;
+}
+
+@mixin section_title ($color) {
+    margin-bottom: 5rem;
+    color: $color;
+    font-size: 3rem;
+    text-align: center;
 }
