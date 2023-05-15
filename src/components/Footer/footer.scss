@@ -1,0 +1,39 @@
+@use '../../index.scss';
+
+footer {
+    background-color: index.$black;
+    color: white;
+}
+
+.footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 0;
+    a {
+        color: white;
+        &:hover {
+            color: index.$blue;
+        }
+    }
+}
+
+.footer_social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3rem;
+    span {
+        width: 40%;
+        height: 4px;
+        background-color: white;
+        border-radius: 2rem;
+    }
+}
+
+.footer_legal {
+    margin-top: 3rem;
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 2rem;
+    cursor: pointer;
+}
