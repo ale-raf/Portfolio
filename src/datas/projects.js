@@ -2,6 +2,7 @@ const projects = [
     {
         id: 0,
         cover: require("../assets/Booki.png"),
+        slug: "Booki-Creez-la-page-daccueil-dune-agence-de-voyage-avec-HTML-et-CSS",
         title: "Booki",
         subtitle: "Créez la page d'accueil d'une agence de voyage avec HTML & CSS",
         technologies: ["HTML", "CSS"],
@@ -13,6 +14,7 @@ const projects = [
     {
         id: 1,
         cover: require("../assets/Sophie_Bluel.png"),
+        slug: "Sophie-Bluel-Creez-une-page-web-dynamique-avec-Javascript",
         title: "Sophie Bluel",
         subtitle: "Créez une page web dynamique avec JavaScript",
         technologies: ["JavaScript", "HTML", "CSS"],
@@ -24,6 +26,7 @@ const projects = [
     {
         id: 2,
         cover: require("../assets/Nina_Carducci.png"),
+        slug: "Nina-Carducci-Debuggez-et-optimisez-un-site-de-photographe",
         title: "Nina Carducci",
         subtitle: "Débuggez et optimisez un site de photographe",
         technologies: ["JavaScript (jQuery)", "HTML", "CSS"],
@@ -34,6 +37,7 @@ const projects = [
     {
         id: 3,
         cover: require("../assets/Booki.png"),
+        slug: "Kasa-Creez-une-application-web-de-location-immobiliere-avec-React",
         title: "Kasa",
         subtitle: "Créez une application web de location immobilière avec React",
         technologies: ["React", "CSS"],
@@ -44,6 +48,7 @@ const projects = [
     {
         id: 4,
         cover: require("../assets/Booki.png"),
+        slug: "Mon-Vieux-Grimoire-Developpez-le-backend-dun-site-de-notation-de-livres",
         title: "Mon Vieux Grimoire",
         subtitle: "Développez le back-end d'un site de notation de livres",
         technologies: ["Node", "Express", "MongoDB"],
