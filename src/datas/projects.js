@@ -32,7 +32,8 @@ const projects = [
         technologies: ["JavaScript (jQuery)", "HTML", "CSS"],
         categories: ["Frontend", "JavaScript"],
         demands: "débug et optimisation des indices de performance, de référencement et d’accessibilité du site ; rédaction d’un cahier de recette",
-        difficulties: "recherche des bugs présents dans plusieurs fichiers et traitement des différents facteurs d’optimisation (gestion du poids des images et des librairies)"
+        difficulties: "recherche des bugs présents dans plusieurs fichiers et traitement des différents facteurs d’optimisation",
+        solutions: "utilisation de la console et du débogueur du navigateur ; gestion du poids des images et des librairies"
     },
     {
         id: 3,
@@ -43,7 +44,8 @@ const projects = [
         technologies: ["React", "CSS"],
         categories: ["Frontend", "JavaScript", "React"],
         demands: "développement complet d’une application côté client à l’aide de React ; initialisation du projet avec Create React App et configuration du routage de l’application",
-        difficulties: "gestion des différentes routes, utilisation des composants et des props, manipulation du hook useState, gestion des erreurs avec affichage d'une page d’erreur"
+        difficulties: "affichage de plusieurs pages distinctes, réutilisation d'éléments récurrents, gestion des erreurs avec affichage d'une page d’erreur",
+        solutions: "gestion des différentes routes, utilisation des composants et des props, affichage condiditionnel"
     },
     {
         id: 4,
