@@ -9,8 +9,12 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 5rem 0;
-    a {
+    a, button {
+        font-size: 3rem;
         color: white;
+        border: none;
+        background-color: index.$black;
+        cursor: pointer;
         &:hover {
             color: index.$blue;
         }
