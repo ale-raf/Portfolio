@@ -37,7 +37,7 @@ const projects = [
     },
     {
         id: 3,
-        cover: require("../assets/Booki.png"),
+        cover: require("../assets/Kasa.png"),
         slug: "Kasa-Creez-une-application-web-de-location-immobiliere-avec-React",
         title: "Kasa",
         subtitle: "Créez une application web de location immobilière avec React",
@@ -49,14 +49,15 @@ const projects = [
     },
     {
         id: 4,
-        cover: require("../assets/Booki.png"),
+        cover: require("../assets/Mon_Vieux_Grimoire.png"),
         slug: "Mon-Vieux-Grimoire-Developpez-le-backend-dun-site-de-notation-de-livres",
         title: "Mon Vieux Grimoire",
         subtitle: "Développez le back-end d'un site de notation de livres",
         technologies: ["Node", "Express", "MongoDB"],
         categories: ["Backend", "JavaScript", "Express"],
         demands: "le code côté client est déjà prêt ; la mission est de compléter l’application en réalisant le code côté serveur ; élaboration d’une API avec un modèle logique de données ; stockage sécurisé des données et mise en œuvre des opérations CRUD",
-        difficulties: "tests des différentes opérations (Thunder Client) depuis le backend et mise à jour des nouvelles données envoyées (Update)"
+        difficulties: "vérification du code sans le navigateur et mise à jour des nouveaux livres ajoutés",
+        solutions: "utilisation de Thunder Client pour tester les différentes fonctionnalités et opérations depuis le backend ; update pour mettre à jour les nouvelles données"
     }
 ]
 
