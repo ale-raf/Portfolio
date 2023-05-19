@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 @use '../../index.scss';
 @import '../../styles/mixins';
 
-=======
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 .banner_section {
     max-width: 1200px;
     margin: 0 auto;
@@ -32,7 +29,6 @@
 .banner_avatar {
     width: 250px;
     border-radius: 100%;
-<<<<<<< HEAD
 
 }
 .banner_bottom {
@@ -43,22 +39,21 @@
 }
 
 .banner_scroll_btn {
-    @include default_btn ($color: index.$cyan, $border: 2px solid index.$cyan);
+    @include default_btn ($color: white, $background: rgb(124,209,236), $border: none);
+    width: 100%;
     margin-left: 3rem;
     padding: 2rem;
-    background-color: white;
+    background: linear-gradient(90deg, rgba(124,209,236,1) 0%, rgba(8,178,227,1) 100%);
     font-family: 'Lato';
     font-size: 2rem;
-    transition: all .3s ease-in-out;
     cursor: pointer;
     &:hover {
-        @include hover_btn ($color: index.$black, $background: index.$blue)
+        @include hover_btn ($color: rgb(255, 255, 255), $background: index.$blue);
+        box-shadow: 0px 0px 5px 0px index.$black;
     }
     svg {
         margin-right: 10px;
     }
-=======
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 }
 
 .banner_img {
@@ -66,15 +61,9 @@
     width: 475px;
     height: 475px;
     background-size: cover;
-<<<<<<< HEAD
     // margin-left: auto;
     margin-bottom: -120px;
     margin-top: -120px;
-=======
-    margin-left: auto;
-    margin-bottom: -100px;
-    margin-top: -90px;
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 }
 
 @media screen and (max-width: 768px) {
@@ -93,5 +82,8 @@
     }
     .banner_img {
         display: none;
+    }
+    .banner_scroll_btn {
+        margin-left: 0;
     }
 }

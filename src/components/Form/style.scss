@@ -1,23 +1,79 @@
+@use '../../index.scss';
+@import '../../styles/mixins';
+
+.form_section {
+    padding: 5rem;
+    // background-color: index.$blue;
+}
+.form_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    h2 {
+        @include section_title ($color: index.$black);
+    }
+}
 .form {
     display: flex;
     flex-direction: column;
+    padding: 5rem;
     font-family: 'Lato', sans-serif;
+    // background-color: white;
+    border-radius: 2rem;
 }
 
 label {
-    margin-bottom: 20px;
+    margin-bottom: 4rem;
+    font-size: 2rem;
 }
 
-input, textarea {
-    border: 2px solid black;
+input {
+    width: 100%;
+    height: 5rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 2px solid index.$black;
+    border-radius: 2rem;
     outline: none;
+    font-family: 'Lato';
+    font-size: 2rem;
     &:focus {
-    border: 2px solid red
+    background-color: index.$blue;
     }
-    &[type="submit"] {
-        width: fit-content;
-        padding: 15px;
-        font-family: 'Lato', sans-serif;    
-        cursor: pointer;
+    &:invalid {
+        color: white;
+        background-color: index.$red;
+        animation: tilt-n-move-shaking .3s infinite;
     }
+}
+
+input[type="submit"] {
+    @include default_btn ($color: white, $background: index.$blue, $border: none);
+    width: 20%;
+    height: auto;
+    margin: 0;
+    padding: 2rem;
+    background: linear-gradient(90deg, rgba(124,209,236,1) 0%, rgba(8,178,227,1) 100%);
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;    
+    cursor: pointer;
+    &:hover {
+        @include hover_btn ($color: white, $background: index.$blue);
+        box-shadow: 0px 0px 5px 0px index.$black;
+    }
+    &:focus {
+        border: none;
+    }
+}
+
+textarea {
+    @extend input ;
+    height: auto;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(0.5px, 0.5px) rotate(0.5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-0.5px, 0.5px) rotate(-0.5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
 }
