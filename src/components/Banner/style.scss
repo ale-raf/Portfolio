@@ -1,5 +1,5 @@
-@use '../../index.scss';
 @import '../../styles/mixins';
+@import '../../styles/variables';
 
 .banner_section {
     max-width: 1200px;
@@ -48,8 +48,8 @@
     font-size: 2rem;
     cursor: pointer;
     &:hover {
-        @include hover_btn ($color: rgb(255, 255, 255), $background: index.$blue);
-        box-shadow: 0px 0px 5px 0px index.$black;
+        @include hover_btn ($color: rgb(255, 255, 255), $background: $blue);
+        box-shadow: $btn__shadow;
     }
     svg {
         margin-right: 10px;

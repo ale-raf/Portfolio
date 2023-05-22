@@ -1,5 +1,5 @@
-@use '../../index.scss';
 @import '../../styles/mixins';
+@import '../../styles/variables';
 
 header {
     position: sticky;
@@ -8,10 +8,6 @@ header {
     z-index: 1000;
     background-color: white;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -21,103 +17,65 @@ header {
     padding: 2rem 0rem;
     font-family: 'Playfair Display', sans-serif;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 .logo {
     // margin-left: 1rem;
     padding: 1rem;
-    color: index.$red;
+    color: $red;
     text-align: center;
-    cursor: pointer;
+    a {
+        color: inherit
+    }
     h1 {
         font-size: 5rem;
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 .hamburger {
     position: absolute;
     top: 55%;
     right: 1rem;
     transform: translateY(-50%);
     display: none;
-<<<<<<< HEAD
     width: 20px;
-=======
-    width: 30px;
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
     color: white;
     border: none;
     background: none;
     cursor: pointer;
 }
-<<<<<<< HEAD
 .burger {
     height: auto;
 }
-=======
-
-.burger {
-    height: auto;
-}
-
-// .navigation {
-//     margin-left: auto;
-// }
-
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 .navigation ul {
     display: flex;
     // flex-wrap: wrap;
     // justify-content: space-evenly;
     gap: 50px;
     // padding: 0;
-<<<<<<< HEAD
     font-family: 'Lato', sans-serif;
-=======
-    font-family: 'Playfair Display', sans-serif;
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
     font-size: 2rem;
     li {
         padding: 1rem;
         // margin: 0 1rem;
-        color: index.$black;
+        color: $black;
         cursor: pointer;
         &:hover {
-            color: index.$red;
+            color: $red;
         }
-<<<<<<< HEAD
         svg {
             margin-right: 5px;
         }
     }
 }
 .navigation #nav_projets {
-    @include default_btn ($color: index.$red, $border: 2px solid index.$red);
-=======
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-    }
-}
-
-.navigation li:nth-child(2) {
-    @include default_btn ($color: index.$red); 
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
+    @include default_btn ($color: white, $background: $red, $border: 2px solid $red);
     &:hover {
-        @include hover_btn ($color: white, $background: index.$red);
+        @include hover_btn ($color: $red, $background: white);
     }
 }
 
 @media screen and (max-width: 768px) {
     .navbar {
         margin-bottom: 50px;
-        background-color: index.$red;
+        background-color: $red;
     }
     .logo {
         color: white
@@ -145,21 +103,24 @@ header {
             margin: 0;
             padding: 1.5rem 0;
             &:hover {
-                color: index.$red;
+                color: $red;
                 background-color: white;
             }
         }
     }
-    li:nth-child(2) {
-        color: index.$black;
-        border: none;
-        &:hover {
-            color: index.$red;
-            background-color: white;
-            border-radius: 0;
-        }
+    .navigation.expanded ul a {
+        width: 50%;
+        margin: 0 auto;
     }
-<<<<<<< HEAD
+    // li:nth-child(2) {
+    //     color: index.$black;
+    //     border: none;
+    //     &:hover {
+    //         color: index.$red;
+    //         background-color: white;
+    //         border-radius: 0;
+    //     }
+    // }
 }
 
 @media screen and (max-width: 1024px) {
@@ -169,6 +130,4 @@ header {
     .navigation ul {
         font-size: 1.75rem;
     }
-=======
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
 }
