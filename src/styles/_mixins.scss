@@ -1,5 +1,6 @@
-@mixin default_btn ($color, $border) {
+@mixin default_btn ($color, $background, $border) {
     color: $color;
+    background-color: $background;
     border: $border;
     border-radius: 3rem;
     transition: all .2s ease-in-out;
@@ -11,7 +12,7 @@
 }
 
 @mixin section_title ($color) {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     color: $color;
     font-size: 3rem;
     text-align: center;
