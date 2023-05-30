@@ -1,0 +1,39 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.slider_navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem auto;
+    button {
+        @include default_btn ($color: white, $background: $red, $border: none);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 105%;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        &:hover {
+            // @include hover_btn ($color: white, $background: white);
+            // border: 2px solid $red;
+            box-shadow: $btn__shadow;
+        }
+    }
+}
+
+.slider_icon {
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .slider_navigation {
+        width: 90%;
+        margin: 3rem auto;
+        button {
+            font-size: 1.5rem;
+        }
+    }
+    .slider_icon {
+        font-size: 2rem;
+    }
+}
