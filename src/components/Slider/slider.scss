@@ -3,10 +3,12 @@
 
 .slider_navigation {
     display: flex;
+    flex-basis: 100%;
     justify-content: space-between;
+    align-items: center;
     margin: 5rem auto;
     button {
-        @include default_btn ($color: white, $background: $red, $border: none);
+        @include default_btn ($color: white, $background: $red, $border: 2px solid $red);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -14,10 +16,13 @@
         padding: 1rem 2rem;
         font-size: 2rem;
         &:hover {
-            // @include hover_btn ($color: white, $background: white);
-            // border: 2px solid $red;
-            box-shadow: $btn__shadow;
+            @include hover_btn ($color: $red, $background: white);
+            border: 2px solid $red;
         }
+    }
+    p {
+        font-family: 'Lato';
+        font-size: 1.5rem;
     }
 }
 

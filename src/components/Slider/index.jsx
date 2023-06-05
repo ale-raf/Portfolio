@@ -1,46 +1,37 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
-import projects from '../../datas/projects';
+// import projects from '../../datas/projects';
 import './slider.scss';
 
-function Slider() {
+function Slider(props) {
+    const index = props.index;
+    
+    const len = props.projects.length - 1;
+    
+    const [back, setBack] = useState(0);
+    
+    const [next, setNext] = useState(0);
 
-    // const [count, setCount] = useState(currentProject[0].id);
+    useEffect(() => {
+        index === 0 ? setBack(len) : setBack(index - 1);
+        index === len ? setNext(0) : setNext(index + 1);
+    }, [index, back, next, len]);
 
-    const [index, setIndex] = useState(0);
 
-    function previousWork() {
-        if (index === 0) {
-            // setCount(projects.length)
-            setIndex(projects.length - 1)
-        } 
-        // setCount(count - 1)
-        setIndex(index - 1)
-    }
-
-    function nextWork() {
-        if (index === projects.length - 1) {
-            // setCount(1)
-            setIndex(0)
-        }
-        // setCount(count + 1)
-        setIndex(index + 1)
-        console.log(projects[index]);
-    }
 
     return (
         <div className='slider_navigation'>
-            <Link to={`/projets/${projects[index].slug}`}>
-                <button onClick={previousWork}>
+            <Link to={`/projets/${props.projects[back].slug}`}>
+                <button>
                     <FontAwesomeIcon icon={faCircleArrowLeft} className='slider_icon'/>
                     projet précédent
                 </button>
             </Link>
-            {/* <p>{count} / {{projects}.length}</p> */}
-            <Link to={`/projets/${projects[index].slug}`}>
-                <button onClick={nextWork}>
+            <p>{index + 1} / {props.projects.length}</p>
+            <Link to={`/projets/${props.projects[next].slug}`}>
+                <button>
                     projet suivant
                     <FontAwesomeIcon icon={faCircleArrowRight} className='slider_icon'/>
                 </button>
