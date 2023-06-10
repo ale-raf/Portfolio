@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.label_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_required {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 1rem;
+    font-family: 'Lato';
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: #a725087b;
+    border-radius: 1rem;
+    &.error {
+        color: $red;
+    }
+    svg {
+        height: 1.25rem;
+        width: 1.25rem;
+        margin-right: 0.5rem;
+        padding: 0.25rem;
+        border: 2px solid $red;
+        border-radius: 100%;
+    }
+}
