@@ -2,8 +2,9 @@
     color: $color;
     background-color: $background;
     border: $border;
-    border-radius: 3rem;
+    border-radius: 1rem;
     transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
 @mixin hover_btn ($color, $background) {
