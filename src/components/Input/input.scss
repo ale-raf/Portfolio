@@ -1,5 +1,35 @@
 @import '../../styles/variables';
 
+label {
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    font-size: 2rem;
+}
+
+input {
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border: 2px solid $black;
+    border-radius: 2rem;
+    outline: none;
+    font-family: 'Lato';
+    font-size: 2rem;
+    &:focus {
+    background-color: $blue;
+    }
+    &:invalid {
+        color: $black;
+        background-color: #a725087b;
+        animation: tilt-n-move-shaking .3s infinite;
+    }
+}
+textarea {
+    @extend input ;
+    height: auto;
+}
+
 .label_container {
     display: flex;
     justify-content: space-between;
@@ -27,5 +57,15 @@
         padding: 0.25rem;
         border: 2px solid $red;
         border-radius: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    label {
+        font-size: 1.75rem;
+    }
+    input[type="submit"] {
+        width: 100%;
+        font-size: 1.75rem;    
     }
 }

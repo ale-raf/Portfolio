@@ -1,5 +1,5 @@
 export const name_validation = {
-    name: 'Nom',
+    name: 'user_name',
     label: 'Nom',
     type: 'text',
     id: 'name',
@@ -17,7 +17,7 @@ export const name_validation = {
 }
 
 export const message_validation = {
-    name: 'Message',
+    name: 'message',
     label: 'Message',
     multiline: true,
     id: 'message',
@@ -35,10 +35,10 @@ export const message_validation = {
 }
 
 export const subject_validation = {
-    name: 'Sujet',
+    name: 'subject',
     label: 'Sujet',
     id: 'subject',
-    placeholder: 'Entrez un sujet pour votre message...',
+    placeholder: 'Précisez le sujet de votre message',
     validation: {
         required: {
             value: true,
@@ -52,7 +52,7 @@ export const subject_validation = {
 }
 
 export const email_validation = {
-    name: 'Email',
+    name: 'user_email',
     label: 'Adresse email',
     type: 'email',
     id: 'email',

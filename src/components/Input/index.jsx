@@ -21,10 +21,7 @@ function Input(props) {
                     {props.label}
                 </label>
                 {isInvalid && (
-                <InputError
-                    message={inputErrors.error.message}
-                    key={inputErrors.error.message}
-                />
+                    <InputError key={inputErrors.error.message} message={inputErrors.error.message} />
                 )}
             </div>
             {props.multiline ? (
