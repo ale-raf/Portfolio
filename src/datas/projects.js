@@ -6,7 +6,7 @@ const projects = [
         title: "Booki",
         subtitle: "Créez la page d'accueil d'une agence de voyage avec HTML & CSS",
         technologies: ["HTML", "CSS"],
-        categories: ["Frontend"],
+        categories: ["Frontend", "React"],
         demands: "intégration complète d’une page web statique conforme à la maquette donnée et dotée d'une interface responsive adaptée aux formats tablette et mobile",
         difficulties: ["suivi logique et cohérent de la maquette fournie", "positionnement des éléments", "format adapté à la taille de l'écran"],
         solutions: ["utilisation de Figma", "Flexbox", "media queries pour gérer l'aspect responsive"],
@@ -25,7 +25,7 @@ const projects = [
         difficulties: ["manipulation des éléments du DOM", "gestion des événements utilisateurs", "affichage des données récupérées depuis les requêtes HTTP côté client"],
         solutions: ["méthodes et écouteurs d'événements", "API fetch"],
         repository: 'https://github.com/ale-raf/OpenClassroomsProjet3.git',
-        demo: 'https://ale-raf.github.io/OpenClassroomsProjet3/'
+        demo: null
     },
     {
         id: 2,
@@ -67,7 +67,7 @@ const projects = [
         difficulties: ["vérification du code sans le navigateur", "mise à jour des nouveaux livres ajoutés"],
         solutions: ["utilisation de Thunder Client pour tester les différentes fonctionnalités et opérations depuis le backend", "update pour mettre à jour les nouvelles données"],
         repository: 'https://github.com/ale-raf/OpenClassroomsProjet7.git',
-        demo: 'https://ale-raf.github.io/OpenClassroomsProjet7/'
+        demo: null
     }
 ]
 

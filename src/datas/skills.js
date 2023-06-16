@@ -4,12 +4,12 @@ const skills = [
     {
         icon: faCode,
         title: 'Front-end',
-        items: ['HTML', 'CSS (SCSS)', 'JavaScript', 'React']
+        items: ['HTML', 'CSS & SCSS', 'JavaScript', 'React.js']
     },
     {
         icon: faServer,
         title: 'Back-end',
-        items: ['Node.js', 'Express', 'MongoDB']
+        items: ['Node.js', 'Express.js', 'MongoDB']
     },
     {
         icon: faScrewdriverWrench,
