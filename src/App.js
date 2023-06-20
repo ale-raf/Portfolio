@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <ScrollToTop>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/projets/:slug' element={<Project />} />
+          <Route path='/Portfolio/' element={<Home />} />
+          <Route path='/Portfolio/projets/:slug' element={<Project />} />
         </Routes>
       </ScrollToTop>
     </div>
