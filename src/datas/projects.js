@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
     {
         id: 0,
         cover: require("../assets/Booki.png"),
@@ -69,6 +69,4 @@ const projects = [
         repository: 'https://github.com/ale-raf/OpenClassroomsProjet7.git',
         demo: null
     }
-]
-
-export default projects
+];

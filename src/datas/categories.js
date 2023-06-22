@@ -1,3 +1,1 @@
-const categories = ["Frontend", "Backend", "JavaScript", "React", "Express"];
-
-export default categories
+export const categories = ["Frontend", "Backend", "JavaScript", "React", "Express"];
