@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.description_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 50%;
+    font-family: 'Lato';
+}
+
+.description_info {
+    font-size: $p-size;
+    li {
+        margin-top: 10px;
+        margin-left: 15px;
+        list-style-type: disc;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .description_container {
+        width: 100%;
+    }
+    .description_info {
+        font-size: 1.5rem;
+    }
+}

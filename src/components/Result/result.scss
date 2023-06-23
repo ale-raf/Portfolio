@@ -1,0 +1,52 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.result_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    width: 45%;
+    img {
+        object-fit: cover;
+        object-position: top left;
+    }
+}
+
+.result_btn {
+    display: flex;
+    justify-content: space-between;
+    button {
+        @include default_btn ($color: white, $background: $cyan, $border: none);
+        @include flex ($justify: center, $items: center);
+        gap: 10px;
+        width: 45%;
+        margin-bottom: 2rem;
+        padding: 1rem 2rem;
+        font-size: $p-size;
+        &:hover {
+            @include hover_btn ($color: white, $background: $blue);
+            box-shadow: $black-shadow;
+        }
+    }
+}
+
+.result_btn .source_code {
+    width: 100%;
+}
+
+@media screen and (max-width: $mobile) {
+    .result_container {
+        width: 100%;
+        button {
+            font-size: 1.5rem;
+        }
+    }
+    .result_btn {
+        display: flex;
+        gap: 2rem;
+        button {
+            width: 50%;
+        }
+    }
+}
