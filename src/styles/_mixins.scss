@@ -18,3 +18,16 @@
     font-size: 3rem;
     text-align: center;
 }
+
+@mixin flex ($justify, $items) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $items;
+}
+
+@mixin grid ($col, $row, $gap) {
+    display: grid;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+    grid-gap: $gap;
+}
