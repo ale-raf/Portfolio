@@ -8,7 +8,7 @@ export const projects = [
         technologies: ["HTML", "CSS"],
         categories: ["Frontend", "React"],
         demands: "intégration complète d’une page web statique conforme à la maquette donnée et dotée d'une interface responsive adaptée aux formats tablette et mobile",
-        difficulties: ["suivi logique et cohérent de la maquette fournie", "positionnement des éléments", "format adapté à la taille de l'écran"],
+        difficulties: ["respect fidèle de la maquette", "positionnement des éléments sur la page", "format de la page adapté à la taille de l'écran"],
         solutions: ["utilisation de Figma", "Flexbox", "media queries pour gérer l'aspect responsive"],
         repository: 'https://github.com/ale-raf/OpenClassroomsProjet2.git',
         demo: 'https://ale-raf.github.io/OpenClassroomsProjet2/'
@@ -22,8 +22,8 @@ export const projects = [
         technologies: ["JavaScript", "HTML", "CSS"],
         categories: ["Frontend", "JavaScript"],
         demands: "rendu navigateur dynamique avec récupération et affichage des données issues d’une API ; création d’une fenêtre modale et d’un formulaire de connexion côté client",
-        difficulties: ["manipulation des éléments du DOM", "gestion des événements utilisateurs", "affichage des données récupérées depuis les requêtes HTTP côté client"],
-        solutions: ["méthodes et écouteurs d'événements", "API fetch"],
+        difficulties: ["aspect dynamique et interactif de certains éléments de la page", "affichage des données récupérées depuis une interface externe (API) côté client"],
+        solutions: ["gestion des événements utilisateurs avec les méthodes et écouteurs d'événements", "réalisation de requêtes HTTP grâce à la méthode API fetch"],
         repository: 'https://github.com/ale-raf/OpenClassroomsProjet3.git',
         demo: null
     },
@@ -37,7 +37,7 @@ export const projects = [
         categories: ["Frontend", "JavaScript"],
         demands: "débug et optimisation des indices de performance, de référencement et d’accessibilité du site ; rédaction d’un cahier de recette",
         difficulties: ["recherche des bugs présents dans plusieurs fichiers", "traitement des différents facteurs d’optimisation"],
-        solutions: ["utilisation de la console et du débogueur du navigateur", "gestion du poids des images et des librairies"],
+        solutions: ["utilisation de la console et du débogueur du navigateur", "gestion du poids des images, des librairies et des scripts"],
         repository: 'https://github.com/ale-raf/OpenClassroomsProjet5.git',
         demo: 'https://ale-raf.github.io/OpenClassroomsProjet5/'
     },
@@ -50,8 +50,8 @@ export const projects = [
         technologies: ["React", "CSS"],
         categories: ["Frontend", "JavaScript", "React"],
         demands: "développement complet d’une application côté client à l’aide de React ; initialisation du projet avec Create React App et configuration du routage de l’application",
-        difficulties: ["affichage de plusieurs pages distinctes", "réutilisation d'éléments récurrents", "gestion des erreurs avec affichage d'une page d’erreur"],
-        solutions: ["gestion des différentes routes", "utilisation des composants et des props", "affichage condiditionnel"],
+        difficulties: ["affichage de plusieurs pages distinctes", "réutilisation d'éléments récurrents", "gestion des erreurs avec affichage d'une page d’erreur dédiée"],
+        solutions: ["gestion des différentes routes de l'application", "utilisation des composants et des props", "affichage condiditionnel"],
         repository: 'https://github.com/ale-raf/OpenClassroomsProjet6.git',
         demo: 'https://ale-raf.github.io/OpenClassroomsProjet6/'
     },
@@ -63,9 +63,9 @@ export const projects = [
         subtitle: "Développez le back-end d'un site de notation de livres",
         technologies: ["Node", "Express", "MongoDB"],
         categories: ["Backend", "JavaScript", "Express"],
-        demands: "le code côté client est déjà prêt ; la mission est de compléter l’application en réalisant le code côté serveur ; élaboration d’une API avec un modèle logique de données ; stockage sécurisé des données et mise en œuvre des opérations CRUD",
-        difficulties: ["vérification du code sans le navigateur", "mise à jour des nouveaux livres ajoutés"],
-        solutions: ["utilisation de Thunder Client pour tester les différentes fonctionnalités et opérations depuis le backend", "update pour mettre à jour les nouvelles données"],
+        demands: "finalisation de l’application en réalisant le code côté serveur ; élaboration d’une API avec un modèle logique de données ; stockage sécurisé des données et mise en œuvre des opérations CRUD",
+        difficulties: ["vérification du code sans le navigateur", "mise à jour des nouveaux livres ajoutés par l'utilisateur"],
+        solutions: ["utilisation de Thunder Client pour tester les différentes fonctionnalités et opérations depuis le backend", `méthode "update" pour mettre à jour les nouvelles données`],
         repository: 'https://github.com/ale-raf/OpenClassroomsProjet7.git',
         demo: null
     }
