@@ -1,13 +1,13 @@
 import { useParams } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import projects from '../../datas/projects';
-import HelmetComponent from '../../components/HelmetComponent';
+import { projects } from '../../datas/projects';
+import Description from '../../components/Description';
 import Header from '../../components/Header';
-import Button from '../../components/Button';
-import ProjectAbstract from '../../components/ProjectAbstract';
-import Info from '../../components/Info';
-import Slider from '../../components/Slider';
+import HelmetComponent from '../../components/HelmetComponent';
 import Footer from '../../components/Footer';
+import ProjectAbstract from '../../components/ProjectAbstract';
+import Result from '../../components/Result';
+import Slider from '../../components/Slider';
 import { faDesktop, faFileCode } from '@fortawesome/free-solid-svg-icons';
 import './project.scss';
 
@@ -24,7 +24,10 @@ function Project() {
 
     return (
         <>
-            <HelmetComponent title={`${currentProject[0].title} - ${currentProject[0].subtitle}`} description={currentProject[0].subtitle} />
+            <HelmetComponent 
+                title={`${currentProject[0].title} - ${currentProject[0].subtitle}`} 
+                description={currentProject[0].subtitle} 
+            />
             <Header />
             <main className='project_wrapper'>
                 {currentProject.map((project) => (
@@ -32,36 +35,24 @@ function Project() {
                         {isTabletOrMobile && (
                             <ProjectAbstract title={project.title} subtitle={project.subtitle} infos={project.technologies} />
                         )}
-                        <div className='project_result'>
-                            <img src={project.cover} alt={project.title} />
-                            <div className='project_btn'>
-                                {project.demo !== null && (
-                                    <Button 
-                                        isDefaultBtn={true} 
-                                        openInNewTab={openInNewTab} 
-                                        link={project.demo} 
-                                        icon={faDesktop} 
-                                        text="Live demo" 
-                                    />
-                                )}
-                                <Button 
-                                    className={project.demo === null ? 'source_code' : null}
-                                    isDefaultBtn={true} 
-                                    openInNewTab={openInNewTab} 
-                                    link={project.repository} 
-                                    icon={faFileCode} 
-                                    text="Code source" 
-                                />
-                            </div>
-                        </div>
-                        <div className='project_info'>
-                            {!isTabletOrMobile && (
-                                <ProjectAbstract title={project.title} subtitle={project.subtitle} infos={project.technologies} />
-                            )}
-                            <p><b>Objectifs</b> : {project.demands}</p>
-                            <Info className="project_prob_sol" title="Problèmes rencontrés :" infos={project.difficulties} />
-                            <Info className="project_prob_sol" title="Solutions :" infos={project.solutions} />
-                        </div>
+                        <Result 
+                            cover={project.cover}
+                            demo={project.demo}
+                            title={project.title}
+                            repository={project.repository}
+                            openInNewTab={openInNewTab}
+                            desktopIcon={faDesktop}
+                            fileCodeIcon={faFileCode}
+                        />
+                        <Description 
+                            demands={project.demands}
+                            difficulties={project.difficulties}
+                            title={project.title}
+                            solutions={project.solutions}
+                            subtitle={project.subtitle}
+                            technologies={project.technologies}
+                            isTabletOrMobile={isTabletOrMobile}
+                        />
                         <Slider index={project.id} projects={projects} />
                     </div>
                 ))}
