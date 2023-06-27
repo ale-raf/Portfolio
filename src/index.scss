@@ -8,14 +8,6 @@
   text-decoration: none;
 }
 
-*[id]:before { 
-  display: block; 
-  content: ""; 
-  margin-top: -125px;
-  height: 125px;
-  visibility: hidden;
-}
-
 html {
   font-size: 62.5%;
 }
