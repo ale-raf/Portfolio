@@ -15,14 +15,13 @@ function Banner() {
                 </div>
             </div>
             <div className='banner_bottom'>
-                <HashLink smooth to='/#about'>
+                <HashLink smooth to='/Portfolio/#about'>
                     <button className='banner_scroll_btn'>
                         <FontAwesomeIcon icon={faArrowDown} className='animate__animated animate__flash animate__slow animate__infinite' /> Découvrir mon parcours
                     </button>
                 </HashLink>
                 <div className='banner_img animate__animated animate__rubberBand'></div>
             </div>
-            
         </section>
     )
 }

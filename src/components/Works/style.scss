@@ -1,81 +1,72 @@
-@use '../../index.scss';
-<<<<<<< HEAD
 @import '../../styles/mixins';
-=======
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
+@import '../../styles/variables';
 
 #projets {
-    background-color: index.$red;
+    padding: 5rem;
+    background-color: $red;
 }
 
 .works_container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    color: white;
     h2 {
-<<<<<<< HEAD
-        margin: 2rem auto 4rem auto;
-=======
-        margin: 2rem auto;
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
-        font-size: 3rem;
-        text-align: center;
+        @include section_title ($color: white);
     }
 }
 
-<<<<<<< HEAD
 .works_filters {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 3rem;
     margin: 5rem 0;
     li {
-        @include default_btn ($color: white, $border: 2px solid white);
+        @include default_btn ($color: white, $background: none, $border: 2px solid white);
         min-width: 100px;
         padding: 1rem;
         font-family: 'Lato';
         font-size: 1.5rem;
         text-align: center;
+        letter-spacing: 1px;
         cursor: pointer;
         &:hover {
-            box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
-=======
-.works_card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    color: black;
-    background-color: black;
-    cursor: pointer;
-    &:hover {
-        background-color: white;
-        filter: opacity(50%);
-        &:hover .works_hover {
-            display: block;
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
+            box-shadow: $black-shadow;
         }
     }
 }
 
-<<<<<<< HEAD
 .works_wrapper {
     display: block;
     padding: 3rem;
 }
 
 .works_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-gap: 10rem;
+    @include grid ($col: repeat(3, 1fr), $row: repeat(2, 1fr), $gap: 10rem);
     justify-items: center;
-=======
-.works_hover {
-    display: none;
-    text-align: center;
-    transition: .3s;
->>>>>>> 54fd0d8b0dbb8f866c82b50065f90a7e3062cba5
+}
+
+@media screen and (max-width: 992px) {
+    .works_container {
+        padding: 0;
+    }
+    .works_wrapper {
+        padding: 0;
+    }
+    .works_grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .works_container {
+        padding: 0;
+    }
+    .works_wrapper {
+        padding: 0;
+    }
+    .works_grid {
+        @include grid ($col: 1fr, $row: repeat(5, 1fr), $gap: 3rem);
+    }
 }

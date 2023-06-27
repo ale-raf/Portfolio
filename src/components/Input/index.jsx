@@ -45,17 +45,10 @@ function Input(props) {
 
 function InputError(props) {
     return (
-        // <motion.p
-        //     className="flex items-center gap-1 px-2 font-semibold text-red-500 bg-red-100 rounded-md"
-        //     {...framer_error}
-        // >
-        // <MdError />
         <p className="input_required error">
             <FontAwesomeIcon icon={faExclamation} />
             {props.message}
         </p>
-        
-        // </motion.p>
     )
 }
 

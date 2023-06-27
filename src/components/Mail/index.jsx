@@ -5,7 +5,11 @@ function Mail({ email, subject = '', body = '', children }) {
 
     if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
 
-    return <button><a href={`mailto:${email}${params}`}>{children}</a></button>;
+    return (
+        <button>
+            <a href={`mailto:${email}${params}`}>{children}</a>
+        </button>
+    )
 }
 
 export default Mail

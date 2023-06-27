@@ -1,24 +1,28 @@
-@use '../../index.scss';
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.projects_ancre {
+    width: 100%;
+}
 
 .projects_card {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
+    @include flex ($justify: center, $items: center);
+    width: 100%;
     cursor: pointer;
     img {
-        width: 300px;
+        width: 100%;
         height: 300px;
         object-fit: cover;
+        object-position: top left;
         border-radius: 2rem;
-        box-shadow: 2px 2px 20px 0px index.$black;
+        box-shadow: 2px 2px 20px 0px $black;
         transition: all .3s ease-in-out;
     }
 }
 
 .projects_card:hover img {
-    // filter: brightness(40%);
+    filter: brightness(50%);
 }
 
 .projects_card:hover .projects_hover {
@@ -32,17 +36,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    width: 95%;
     transform: translate(-50%, -50%);
-    background-color: #a7250888;
     border-radius: 2rem;
-    font-family: 'Lato';
-    font-size: 2rem;
-    line-height: 30px;
     color: white;
-    text-align: center;
+    font-family: 'Lato';
+    font-size: $h-btn-size;
+    line-height: 30px;
     opacity: 0;
+    text-align: center;
     transition: all .2s ease-in-out;
     h3 {
         margin-bottom: 2rem;

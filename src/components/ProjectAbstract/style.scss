@@ -20,7 +20,7 @@
     flex-wrap: wrap;
     align-items: baseline;
     font-size: $p-size;
-    line-height: 30px;
+    line-height: $line-height;
     li {
         @include default_btn ($color: $red, $background: white, $border: 2px solid $red);
         width: fit-content;
@@ -35,7 +35,7 @@
     .project_abstract {
         ul {
             font-size: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
     }
     .project_tech {

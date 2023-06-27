@@ -4,15 +4,14 @@
 .banner_section {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem;
+    padding-top: 5rem;
 }
 
 .banner_container {
     position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2rem;
-    padding: 0.5rem 1rem;
+    @include flex ($justify: space-between, $items: center);
+    gap: 3rem;
     h1 {
         margin-bottom: 3.5rem;
         font-family: 'Lato';
@@ -21,7 +20,7 @@
     }
     h2 {
         font-family: 'Lato';
-        font-size: 2rem;
+        font-size: $h-btn-size;
         font-weight: 400;
     }
 }
@@ -32,24 +31,18 @@
 
 }
 .banner_bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    align-items: center;
+    @include flex ($justify: space-between, $items: center);
 }
 
 .banner_scroll_btn {
-    @include default_btn ($color: white, $background: rgb(124,209,236), $border: none);
+    @include default_btn ($color: white, $background: $cyan, $border: none);
     width: 100%;
-    margin-left: 3rem;
     padding: 2rem;
-    background: linear-gradient(90deg, rgba(124,209,236,1) 0%, rgba(8,178,227,1) 100%);
     font-family: 'Lato';
-    font-size: 2rem;
-    cursor: pointer;
+    font-size: $h-btn-size;
     &:hover {
-        @include hover_btn ($color: rgb(255, 255, 255), $background: $blue);
-        box-shadow: $btn__shadow;
+        @include hover_btn ($color: white, $background: $blue);
+        box-shadow: $cyan-shadow;
     }
     svg {
         margin-right: 10px;
@@ -61,20 +54,29 @@
     width: 475px;
     height: 475px;
     background-size: cover;
-    // margin-left: auto;
-    margin-bottom: -120px;
-    margin-top: -120px;
+    margin-bottom: -110px;
+    margin-top: -100px;
 }
 
 @media screen and (max-width: 768px) {
+    .banner_section {
+        padding: 5rem 2rem;
+    }
     .banner_container {
+        flex-direction: column;
         margin-bottom: 50px;
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
         h2 {
             width: 100%;
-            font-size: 2rem;
+            font-size: $h-btn-size;
+        }
+    }
+    .banner_bottom {
+        justify-content: center;
+        a {
+            width: 100%;
         }
     }
     .banner_avatar {
@@ -83,7 +85,19 @@
     .banner_img {
         display: none;
     }
-    .banner_scroll_btn {
-        margin-left: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .banner_container {
+        gap: 5rem;
+    }
+    .banner_avatar {
+        width: 200px;
+    }
+    .banner_img {
+        height: 400px;
+        width: 400px;
+        margin-top: -60px;
+        margin-bottom: -95px;
     }
 }

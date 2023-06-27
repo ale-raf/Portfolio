@@ -1,11 +1,11 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-function HelmetComponent({ title, description }) {
+function HelmetComponent(props) {
     return (
         <HelmetProvider>
             <Helmet>
-                <title>{title}</title>
-                <meta name="description" content={description} />
+                <title>{props.title}</title>
+                <meta name="description" content={props.description} />
             </Helmet>
         </HelmetProvider>
     )

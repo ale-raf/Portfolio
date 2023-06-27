@@ -1,9 +1,10 @@
+import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import './footer.scss';
+import Button from '../Button';
 import Mail from '../Mail';
-import { HashLink } from 'react-router-hash-link';
+import './footer.scss';
 library.add(fas);
 
 function Footer() {
@@ -16,20 +17,27 @@ function Footer() {
             <div className='footer_container'>
                 <div className='footer_social'>
                     <span></span>
-                    <button role='link' onClick={() => openInNewTab('https://github.com/ale-raf')}>
-                        <i className="fa-brands fa-github"></i>
-                    </button>
-                    <button role='link' onClick={() => openInNewTab('https://www.linkedin.com/in/alexis-raffin-867596257/')}>
-                        <i className="fa-brands fa-linkedin"></i>
-                    </button>
-                    <Mail email='raffinalexis@gmail.com' subject='' body='Bonjour,...'>
+                    <Button 
+                        isDefaultBtn={false} 
+                        openInNewTab={openInNewTab} 
+                        link='https://github.com/ale-raf' 
+                        icon="fa-brands fa-github"
+                    />
+                    <Button 
+                        isDefaultBtn={false} 
+                        openInNewTab={openInNewTab} 
+                        link='https://www.linkedin.com/in/alexis-raffin-867596257/' 
+                        icon="fa-brands fa-linkedin"
+                    />
+                    <Mail email={process.env.REACT_APP_EMAIL} subject='' body=''>
                         <FontAwesomeIcon icon="fa-solid fa-envelope" />
                     </Mail>
                     <span></span>
                 </div>
-                <HashLink smooth to='/#banner'>
+                <HashLink smooth to='/Portfolio/#banner'>
                     <div className='footer_legal'>
-                        ® 2023 Alexis Raffin
+                        <p>Site portfolio réalisé avec React.js</p>
+                        <p>® 2023 Alexis Raffin</p> 
                     </div>
                 </HashLink>
             </div>

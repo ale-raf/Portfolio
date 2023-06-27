@@ -6,6 +6,10 @@
     gap: 2.5rem;
     width: 50%;
     font-family: 'Lato';
+    p {
+        font-size: $p-size;
+        line-height: $line-height;
+    }
 }
 
 .description_info {
@@ -14,6 +18,7 @@
         margin-top: 10px;
         margin-left: 15px;
         list-style-type: disc;
+        line-height: $line-height;
     }
 }
 

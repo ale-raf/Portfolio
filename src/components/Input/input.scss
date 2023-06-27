@@ -1,9 +1,10 @@
+@import '../../styles/mixins';
 @import '../../styles/variables';
 
 label {
     margin-bottom: 1rem;
     margin-left: 0.5rem;
-    font-size: 2rem;
+    font-size: $h-btn-size;
 }
 
 input {
@@ -15,13 +16,13 @@ input {
     border-radius: 2rem;
     outline: none;
     font-family: 'Lato';
-    font-size: 2rem;
+    font-size: $h-btn-size;
     &:focus {
     background-color: $blue;
     }
     &:invalid {
         color: $black;
-        background-color: #a725087b;
+        background-color: $red-back;
         animation: tilt-n-move-shaking .3s infinite;
     }
 }
@@ -31,9 +32,7 @@ textarea {
 }
 
 .label_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex ($justify: space-between, $items: center);
 }
 
 .input_required {
@@ -60,12 +59,27 @@ textarea {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile) {
     label {
         font-size: 1.75rem;
     }
     input[type="submit"] {
         width: 100%;
-        font-size: 1.75rem;    
+        font-size: $p-size;    
+    }
+    input::placeholder, textarea::placeholder {
+        font-size: 1.5rem;
+    }
+    .label_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .input_required {
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        svg {
+            height: 1rem;
+            width: 1rem;
+        }
     }
 }

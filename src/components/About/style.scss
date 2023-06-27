@@ -6,20 +6,17 @@
 }
 
 .about_introduction {
-    // height: 100vh;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
+    padding: 5rem 3rem 10rem 3rem;
     background-color: $red;
-    h3 {
-        max-width: 1200px;
-        margin: 2rem auto;
-        font-size: 2.5rem;
-    }
     p {
         max-width: 1200px;
         margin: 0 auto 3rem auto;
-        font-size: 1.75rem;
+        font-size: $p-size;
         line-height: 35px;
+    }
+    p:first-child {
+        font-size: 1.9rem;
+        font-weight: bold;
     }
 }
 
@@ -35,9 +32,9 @@
     z-index: 100;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile) {
     .about_introduction {
-        padding: 3rem;
+        padding: 3rem 3rem 1rem 3rem;
     }
     .about_img {
         display: none;

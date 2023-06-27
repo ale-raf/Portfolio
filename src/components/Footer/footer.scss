@@ -1,7 +1,8 @@
-@use '../../index.scss';
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
 footer {
-    background-color: index.$black;
+    background-color: $black;
     color: white;
 }
 
@@ -9,23 +10,21 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 5rem 0;
+}
+
+.footer_social {
+    @include flex ($justify: space-between, $items: center);
+    font-size: 3rem;
     a, button {
         font-size: 3rem;
         color: white;
         border: none;
-        background-color: index.$black;
+        background-color: $black;
         cursor: pointer;
         &:hover {
-            color: index.$blue;
+            color: $blue;
         }
     }
-}
-
-.footer_social {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 3rem;
     span {
         width: 40%;
         height: 4px;
@@ -38,6 +37,33 @@ footer {
     margin-top: 3rem;
     text-align: center;
     font-family: 'Lato';
-    font-size: 2rem;
-    cursor: pointer;
+    font-size: $h-btn-size;
+    color: white;
+    p:first-child {
+        font-size: $p-size;
+    }
+    p:nth-child(2) {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .footer_container {
+        width: 95%;
+        a, button {
+            font-size: $h-btn-size;
+        }
+    }
+    .footer_social span {
+        width: 30%;
+    }
+    .footer_legal {
+        font-size: $p-size;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .footer_container {
+        padding: 5rem 2rem;
+    }
 }

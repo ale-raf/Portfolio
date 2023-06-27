@@ -5,7 +5,7 @@ function Info(props) {
     );
     return (
         <ul className={props.className}>
-            <b>{props.title}</b> :
+            <b>{props.title}</b>
             {listItems}
         </ul>
     )

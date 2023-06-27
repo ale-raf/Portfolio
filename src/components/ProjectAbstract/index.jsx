@@ -1,5 +1,5 @@
 import Info from "../Info";
-import './project_abstract.scss';
+import './style.scss';
 
 function ProjectAbstract(props) {
     return (
