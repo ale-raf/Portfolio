@@ -4,7 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark, faHouse, faDiagramProject, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import useScrollDirection from '../useScrollDirection';
-import './style.scss';
+import './header.scss';
 
 function Header() {
 

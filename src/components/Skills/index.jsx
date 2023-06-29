@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { skillsList, skillsIntro } from '../../datas/skills';
-import './style.scss';
+import './skills.scss';
 
 function Skills() {
     return (

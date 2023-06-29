@@ -5,7 +5,7 @@ import { name_validation, message_validation, email_validation, subject_validati
 import Input from '../Input';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
-import './style.scss';
+import './contactForm.scss';
 
 function ContactForm() {
     const methods = useForm();

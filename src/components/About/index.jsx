@@ -1,6 +1,6 @@
 import Skills from '../Skills';
 import { aboutContent } from '../../datas/about';
-import './style.scss';
+import './about.scss';
 
 function About() {
     return (

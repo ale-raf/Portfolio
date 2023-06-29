@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { categories } from '../../datas/categories';
 import { projects } from '../../datas/projects';
 import Card from '../Card';
-import './style.scss';
+import './works.scss';
 
 function Works() {
 
