@@ -14,9 +14,11 @@ export const skillsList = [
     {
         icon: faScrewdriverWrench,
         title: 'Outils',
-        items: ['Git & Github', 'Figma & Photoshop', 'SEO', 'Trello']
+        items: ['Git & Github', 'Figma & Photoshop', 'Search Engine Optimization', 'Trello']
     }
 ];
 
-export const skillsIntro = "La formation que j'ai suivie m'a permis de découvrir et d'apprendre plusieurs langages de programmation et des outils utiles au développement web. Ainsi, j'ai pu acquérir des compétences variées et plutôt solides tournées notamment vers l'environnement JavaScript. Évidemment, ces connaissances constituent une base qui demande à être sans cesse actualisée, revue et complétée.";
+export const skillsIntro = `La formation que j'ai suivie m'a permis de découvrir et d'apprendre plusieurs langages de programmation 
+    et des outils utiles au développement web. Ainsi, j'ai pu acquérir des compétences variées et solides notamment tournées vers l'environnement JavaScript. 
+    Il me tarde, à présent, de compléter et d'approfondir ces connaissances pour suivre au mieux l'évolution rapide et toujours plus poussée du développement.`;
 
