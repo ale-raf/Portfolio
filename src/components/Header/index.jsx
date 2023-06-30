@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark, faHouse, faDiagramProject, faAddressCard } from '@fortawesome/free-solid-svg-icons';
-import useScrollDirection from '../useScrollDirection';
+import useScrollDirection from '../../hooks/useScrollDirection';
 import './header.scss';
 
 function Header() {

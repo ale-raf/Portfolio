@@ -1,4 +1,4 @@
-import HelmetComponent from '../../components/HelmetComponent';
+import HelmetComponent from '../../context/HelmetComponent';
 import Header from '../../components/Header';
 import Banner from '../../components/Banner';
 import About from '../../components/About';

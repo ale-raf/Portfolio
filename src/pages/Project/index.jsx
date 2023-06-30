@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { projects } from '../../datas/projects';
 import Description from '../../components/Description';
 import Header from '../../components/Header';
-import HelmetComponent from '../../components/HelmetComponent';
+import HelmetComponent from '../../context/HelmetComponent';
 import Footer from '../../components/Footer';
 import ProjectAbstract from '../../components/ProjectAbstract';
 import Result from '../../components/Result';
