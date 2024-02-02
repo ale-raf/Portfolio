@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* GLOBAL TAGS & CLASSES */
 body {
   background-color: #fef2f2;
@@ -15,6 +16,7 @@ body {
 }
 section {
   margin-top: 100px;
+  padding-top: 20px;
 }
 section h2 {
   margin-bottom: 30px;
@@ -45,6 +47,7 @@ footer {
 .illustrations {
   max-width: 400px;
 }
+
 /* HEADER */
 .header__menu {
   display: flex;
@@ -53,14 +56,23 @@ footer {
   margin-bottom: 50px;
   font-size: 18px;
 }
+.header__menu a {
+  padding: 5px;
+  border-bottom: 2px solid transparent;
+  border-radius: 15px;
+  /* transition: 0.2s; */
+}
 .header__menu a:hover {
-  font-weight: 500;
+  /* font-weight: 500; */
   text-decoration: underline;
+  /* background-color: #fee2e2; */
 }
 .header__about p {
   margin-block: 20px;
   font-size: 32px;
-  line-height: 40px;
+}
+.header__about p:first-child {
+  font-size: 20px;
 }
 .header__about span {
   font-weight: 500;
@@ -99,6 +111,7 @@ footer {
   height: 15px;
   width: 15px;
 }
+
 /* SKILLS SECTION */
 .skills__content {
   display: flex;
@@ -141,16 +154,8 @@ footer {
   height: 20px;
   width: 20px;
 }
+
 /* WORKS SECTION */
-/* .works__content {
-  flex-direction: row-reverse;
-} */
-/* .works__content > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 15px;
-} */
 .works__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -189,6 +194,7 @@ footer {
   display: flex;
   gap: 5px;
 }
+
 /* CONTACT SECTION */
 .contact__content {
   display: flex;
@@ -205,6 +211,9 @@ footer {
   h1 {
     max-width: 100%;
     font-size: 56px;
+  }
+  section {
+    margin-top: 50px;
   }
   section h2 {
     font-size: 32px;
