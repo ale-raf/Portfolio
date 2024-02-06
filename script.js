@@ -22,7 +22,7 @@ const works = [
   },
   {
     title: "Nina Carducci",
-    description: "Débug et optimisation d'un site de photographe",
+    description: "Débogage et optimisation d'un site de photographe",
     stack: ["images/JavaScript.png", "images/HTML5.png", "images/CSS3.png"],
     code: "https://github.com/ale-raf/OpenClassroomsProjet5",
     demo: "https://ale-raf.github.io/OpenClassroomsProjet5/",
