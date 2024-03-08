@@ -57,13 +57,29 @@ footer {
   font-size: 18px;
 }
 .header__menu a {
+  position: relative;
   padding: 5px;
   border-bottom: 2px solid transparent;
   border-radius: 15px;
 }
 .header__menu a:hover {
   font-weight: 500;
-  transform: translateY(-5px);
+}
+.header__menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #450a0a;
+  opacity: 1;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-out;
+}
+.header__menu a:hover::after,
+.header__menu a:focus::after {
+  transform: scaleX(1);
 }
 .header__about p {
   margin-block: 20px;
@@ -202,6 +218,17 @@ footer {
 .contact__links p {
   min-width: 100%;
   font-size: 18px;
+}
+
+@keyframes underline {
+  from {
+    left: 50%;
+    width: 0;
+  }
+  to {
+    left: 0;
+    width: 100%;
+  }
 }
 
 /* MEDIAQUERIES */
