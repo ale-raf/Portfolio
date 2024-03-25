@@ -41,6 +41,13 @@ const works = [
     code: "https://github.com/ale-raf/OpenClassroomsProjet7",
     demo: null,
   },
+  {
+    title: "GameOn",
+    description: "Création d'une landing page avec JavaScript",
+    stack: ["images/JavaScript.png", "images/HTML5.png", "images/CSS3.png"],
+    code: "https://github.com/ale-raf/OpenClassrooms_GameOn",
+    demo: "https://ale-raf.github.io/OpenClassrooms_GameOn",
+  },
 ];
 
 function createWorksCard(work) {
