@@ -48,6 +48,13 @@ const works = [
     code: "https://github.com/ale-raf/OpenClassrooms_GameOn",
     demo: "https://ale-raf.github.io/OpenClassrooms_GameOn",
   },
+  {
+    title: "Where in the world",
+    description: "Défi consistant à manipuler des données issues d'une API",
+    stack: ["images/JavaScript.png", "images/HTML5.png", "images/CSS3.png"],
+    code: "https://github.com/ale-raf/REST-countries-API",
+    demo: "https://ale-raf.github.io/REST-countries-API",
+  },
 ];
 
 function createWorksCard(work) {
